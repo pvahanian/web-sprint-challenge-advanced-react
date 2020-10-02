@@ -28,15 +28,27 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
-1. Explain how to build stateful class components.
+1. Explain how to build stateful class components. To create a class we need to declare it with:
+class NameOfClassComponent extends Coponent{
+   constructor() {
+    super()
+    this.state={
+      variblesForStateGoHere: ValuesGoHere
+    }
+}
+if we display something we must use render() not return
 
-2. Describe the different phases of the component lifecycle.
 
-3. Demonstrate an understanding of class component lifecycle methods.
+2. Describe the different phases of the component lifecycle. mounting updating and unmounting.  Mounting is when we set up the data and put elements into the DOM, updating is when we update the data with different states, and unmounting is when we remove elements from the DOM
 
-4. Define stateful logic.
+3. Demonstrate an understanding of class component lifecycle methods. There are multiple ones we use including:
+componentDidMount()
+render()
+componentWillUnmount()
 
-5. Describe how to test a React component with React Testing Library.
+4. Define stateful logic.  It is logic that is built into a component usually dealing with state.
+
+5. Describe how to test a React component with React Testing Library.  We would write sepreate test files for each component we want to test using jest built testing.  Then we would test to ensure components are behaving the way we intended by seeing if they accept values, proper values, and hold values through different changes in the page.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -61,15 +73,15 @@ _Please follow the setup instructions closely so that you can get everything up 
 
 **Starting the server**
 
-- [ ] Run `npm install` to download dependencies for the server.
-- [ ] Run the server using `npm start`.
-- [ ] Open a new browser tab and navigate to `http://localhost:3333/plants` - if you see a JSON object with plants data, then you know the server is running 👍
+- [X] Run `npm install` to download dependencies for the server.
+- [X] Run the server using `npm start`.
+- [X] Open a new browser tab and navigate to `http://localhost:3333/plants` - if you see a JSON object with plants data, then you know the server is running 👍
 
 **Starting the React app**
 
-- [ ] In a separate terminal cd into the `client` folder and run `npm install` to download dependencies.
-- [ ] Still inside the `client` folder run `npm run start` to run the client application.
-- [ ] Your browser should open up the project as normal
+- [X] In a separate terminal cd into the `client` folder and run `npm install` to download dependencies.
+- [X] Still inside the `client` folder run `npm run start` to run the client application.
+- [X] Your browser should open up the project as normal
 
 **Starting your test runner**
 
@@ -89,9 +101,9 @@ Your finished project must include all of the following requirements:
 
 Display a list of the plants from the server. This should be done in the class component `PlantList`.
 
-- [ ] In the `PlantList` class component, fetch data from the server you now have running - the data can be fetched from `http://localhost:3333/plants`
-- [ ] Set the data to a state property called `this.state.plants`
-- [ ] The render function is already built and styled. Once the data is on the state, you will see the list of plants, and you will have the functionality to add a plant to the cart
+- [X] In the `PlantList` class component, fetch data from the server you now have running - the data can be fetched from `http://localhost:3333/plants`
+- [X] Set the data to a state property called `this.state.plants`
+- [X] The render function is already built and styled. Once the data is on the state, you will see the list of plants, and you will have the functionality to add a plant to the cart
 
 #### Shopping Cart
 
@@ -101,13 +113,13 @@ Nothing needs to be done here. You _will_ have to navigate to the cart page in y
 
 The form is working, but it is currently controlled by local stateful logic. We want to control this form with a custom hook.
 
-- [ ] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic
+- [X] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic
 
 _Note: You built a useForm hook in the guided project this week. You will probably need to use that as a guide to complete this step. However, try and build it out first before you peek at the guided project. And *do not* copy/paste directly from the guided project!_
 
 #### Testing the Checkout Form
 
-- [ ] Build out the tests listed in `CheckoutForm.test.js`. You will need to make sure they are testing what the test title implies they are testing
+- [X] Build out the tests listed in `CheckoutForm.test.js`. You will need to make sure they are testing what the test title implies they are testing
 - [ ] Make sure the tests are passing, and make sure you can cause the tests to fail purposefully, so that you know the tests are truly working
 
 <hr/>
